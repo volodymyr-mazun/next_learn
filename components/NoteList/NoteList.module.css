@@ -1,0 +1,15 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.empty {
+    padding: 12px;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}

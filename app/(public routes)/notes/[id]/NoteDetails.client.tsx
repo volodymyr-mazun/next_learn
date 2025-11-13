@@ -8,11 +8,7 @@ const NoteDetailsClient = () => {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
 
-  const {
-    data: note,
-    isLoading,
-    error,
-  } = useQuery({
+  const {data: note,isLoading,error,} = useQuery({
     queryKey: ['note', id],
     queryFn: () => getSingleNote(id),
     refetchOnMount: false,
@@ -26,7 +22,6 @@ const NoteDetailsClient = () => {
   };
 
   if (isLoading) return <p>Loading...</p>;
-
   if (error || !note) return <p>Some error..</p>;
 
   const formattedDate = note.updatedAt

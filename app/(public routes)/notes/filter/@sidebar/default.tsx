@@ -8,6 +8,7 @@ const NotesSidebar = async () => {
 
   return (
     <ul>
+      <Link href="/notes/action/create">Create note</Link>
       <li>
         <Link href={`/notes/filter/all`}>All notes</Link>
       </li>
